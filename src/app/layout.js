@@ -1,4 +1,4 @@
-
+import Link from "next/link";
 import "./globals.css";
 import Image from 'next/image';
 
@@ -12,7 +12,9 @@ export default function RootLayout({ children }) {
                   <div className='cabecalho'>Restaurantes e Vendedores</div>
                   <div className='cabecalho'>Para Empresas</div>
                   <div className='cabecalho' id='criarConta'>Criar Conta</div>
-                  <div className='cabecalho' id='entrar'>Entrar</div>
+                  <Link href='/login'>
+                    <button className='cabecalho' id='entrar'>Entrar</button>
+                  </Link>
               </header>
             {children}
               <footer>

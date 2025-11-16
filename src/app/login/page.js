@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import "./globals.css";
+import Link from "next/link";
 export const metadata = {
   title: 'vDiet',
 };
@@ -7,19 +7,21 @@ export const metadata = {
 export default function Home() {
   return (
             <main>
-              <div id='anuncio1'>
-                <p id='setas'>&lt;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&gt;</p>
-                <Image src='/salada.png' alt="Salada" id='salada' width={200} height={200}/>
-              <div className="textoBox">
-                <span>Refeições na medida</span>
-                <span>para sua dieta!</span>
+              <div id='caixalogin'>
+                <Link href='/'>
+                  <h2>&lt;</h2>
+                </Link>         
+                <h1>LOGIN</h1>
+                <p>Nome de usuário, e-mail ou telefone:</p>
+                <input type='text' id='usuarioInput'></input>
+                <p>Senha:</p>
+                <input type='password' id='senhaInput'></input>
+                <div id='loginGoogle'>
+                  <Image src='/google.png' alt='Google Logo' id='google' width={30} height={30}/>
+                  <p>Entrar com o Google</p>
+                  <button id='entrar'>Entrar</button>
+                </div>
               </div>
-              </div>
-              <div id='titulo1'>Tudo para facilitar sua dieta</div>
-              <div id='subtitulo1'>Veja as comedorias mais próximas de você.</div>
-              <Image src='/pin.png' alt='Pin' id='pin' className='pesquisa' width={26.723} height={40}/>
-              <input type='text' id='pesquisa1' className='pesquisa' placeholder='Diga seu endereço'></input>
-  
             </main>
   );
 }
